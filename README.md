@@ -6,41 +6,27 @@
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
 
-## Description
+# Orders MicroService
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Development pasos
 
+1. Clonar el proyecto
+2. Crear un archivo `.env` basado en el archivo `.env.template`
+3. Levantar la base de datos con `docker compose up -d`
+4. Levantar el servidor de NATS
+```
+docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats
+```
+5. Levantar el proyecto con `npm run start:dev`
+
+
+## Nats
 ```bash
-$ npm install
+docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
@@ -48,7 +34,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Author - [Jordy Rojas](https://github.com/dasH128)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 

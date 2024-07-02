@@ -13,8 +13,6 @@ export class OrdersController {
 
   @MessagePattern('createOrder')
   create(@Payload() createOrderDto: CreateOrderDto) {
-    console.log('createORder MS');
-    console.log(createOrderDto);
     return this.ordersService.create(createOrderDto);
   }
 
